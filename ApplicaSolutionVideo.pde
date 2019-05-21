@@ -1,47 +1,36 @@
-// test change for github
+// constants, changed before program is run
+int animationType = 1;
+String logoFile = "test.png";
+String companyName = "Your Company Name Here";
 
+// declarations of the company name and logo objects
 Logo logo;
 CompanyName name;
 
+// setup function that will run only once when the program begins
 void setup() {
+  // declares the size of the screen as 1280 by 720
   size(1280, 720);
-  logo = new Logo(width/2, height/2, width*2/3, "test.png");
-  name = new CompanyName("Test Company Name", width/2, height/4, 64);
+
+  // declare the logo and name object to appear at the center of the screen
+  logo = new Logo(width/2, height/2, width*2/3, logoFile);
+  name = new CompanyName(companyName, width/2, height/4, 64);
+
+  // preset the animation
   logo.preset();
   name.preset();
 }
 
+// function that runs an infinite loop after the setup function runs
 void draw() {
+  // draws a generic blue background
   background(46, 179, 253);
 
-  //if (keyPressed) {
-  //  if (key == 's') {
-  //    //logo.spinLogo();
-  //    logo.angle += 5;
-  //  }
-  //  if (key == 'z') {
-  //    //logo.scaleLogo();
-  //    logo.scale += 0.1;
-  //  }
-  //  if (key == 'f') {
-  //    //logo.fadeLogo();
-  //    if (logo.transparency > 0) {
-  //      logo.transparency -= 4;
-  //    }
-  //  }
-  //  if (key == 'r') {
-  //    logo.reset();
-  //  }
-  //  if (key == 'v') {
-  //    if (logo.flipScale > -1) {
-  //      logo.flipScale -= 0.1;
-  //    }
-  //  }
-  //}
-  
-  logo.action1();
+  // make the logo step animations based on the chosen animation type
+  logo.animate(animationType);
+  name.animate(animationType);
+
+  // in each iteration, show the logo and the name
   logo.show();
-  
-  name.action1();
   name.show();
 }
