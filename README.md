@@ -1,5 +1,6 @@
 # ApplicaSolutionVideo
-take in a photo and text as an input, producing an animated video as an output using Processing (Java).
+take in a photo and text as an input, producing an animated video as an output using Processing (Java).<br>
+<b>Note:</b> if you already have processing and the files are already downloaded, proceed to step 4.
 
 <h1> Step 1 </h1>
 Download the most recent version of Precessing found below if you havent already: <br>
