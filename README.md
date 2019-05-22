@@ -18,7 +18,7 @@ At the top of the code, input the name of the logo file and the client company n
 
 <h1> Step 5 </h1>
 Run the code using either command-R or the play button at the top of the screen; each frame of animation will be saved into a folder titled "frames" in the folder containing the code<br>
-Note: before you run be sure that to delete the "frames" folder if it exists
+<b>Note:</b> before you run be sure to delete the "frames" folder if it exists
 
 <h1> Step 6 </h1>
 With Processing open, in the top bar, click the drop down titled "tools" and select "Movie Maker"
