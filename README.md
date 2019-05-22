@@ -22,6 +22,8 @@ In the top bar select sketch > import library > add library
 <img src="ApplicaSolutionVideo/assets/addLibrary.png">
 In the search bar, find the library titled "Video Export", click it and install the library. You will see a green chech mark next to the library when done.
 <img src="ApplicaSolutionVideo/assets/installLibrary.png">
+Now do the same thing with the library titled "Video":
+<img src="ApplicaSolutionVideo/assets/installLibrary2.png">
 
 <h1> Step 6: Input the client's information </h1>
 At the top of the code, input the name of the logo file and the client company name, their animation type, and the name of the new video file.
