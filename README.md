@@ -7,10 +7,10 @@ Download the most recent version of Precessing found below if you havent already
 
 <h1> Step 2 </h1>
 Download the files from this repository using the green button at the top-right that says "clone or download", be sure that they are all in the same folder. Also be sure that the client's logo is in that folder as well.
+<img src="assets/downloadButton.png">
 
 <h1> Step 3 </h1>
 Once downloaded, open the file "ApplicaSolutionVideo.pde" using Processing
-<img src="assets/downloadButton.png">
 
 <h1> Step 4 </h1>
 At the top of the code, input the name of the logo file and the client company name and their animation type
