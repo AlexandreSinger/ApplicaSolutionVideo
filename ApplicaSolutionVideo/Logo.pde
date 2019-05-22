@@ -16,18 +16,18 @@ class Logo {
 
   // function to show the image (allowing for animations to be used
   void show() {
-    tint(255, transparency);
-    imageMode(CENTER);
+    frame.tint(255, transparency);
+    frame.imageMode(CENTER);
 
-    pushMatrix();
+    frame.pushMatrix();
 
-    translate(x, y);
+    frame.translate(x, y);
     //scale(scale);
-    scale(flipScale, 1);
-    rotate(radians(angle));
-    image(img, 0, 0);
+    frame.scale(flipScale, 1);
+    frame.rotate(radians(angle));
+    frame.image(img, 0, 0);
 
-    popMatrix();
+    frame.popMatrix();
   }
 
   // function to preset the animation
@@ -41,7 +41,7 @@ class Logo {
   void animate(int type) {
     if (type == 1) {
       if (transparency <= 255) {
-        transparency += 4;
+        transparency += 8;
       }
       if (flipScale <= 1) {
         flipScale += 0.05;

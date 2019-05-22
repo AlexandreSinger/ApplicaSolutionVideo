@@ -19,11 +19,11 @@ class CompanyName {
 
   // function that shows the text on the screen
   void show() {
-    textAlign(CENTER);
-    textSize(fontSize);
-    textFont(font);
+    frame.textAlign(CENTER);
+    frame.textSize(fontSize);
+    frame.textFont(font);
 
-    text(name, x, y);
+    frame.text(name, x, y);
   }
 
   // function that will preset the animation
