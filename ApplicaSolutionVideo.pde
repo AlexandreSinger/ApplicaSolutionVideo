@@ -1,6 +1,6 @@
 // constants, changed before program is run
 int animationType = 1;
-String logoFile = "test.png";
+String logoFile = "assets/test.png";
 String companyName = "Your Company Name Here";
 
 // declarations of the company name and logo objects
@@ -9,8 +9,9 @@ CompanyName name;
 
 // setup function that will run only once when the program begins
 void setup() {
-  // declares the size of the screen as 1280 by 720
+  // declares the size of the screen as 1280 by 720 and the framerate as 30 fps
   size(1280, 720);
+  frameRate(30);
 
   // declare the logo and name object to appear at the center of the screen
   logo = new Logo(width/2, height/2, width*2/3, logoFile);
@@ -33,4 +34,12 @@ void draw() {
   // in each iteration, show the logo and the name
   logo.show();
   name.show();
+  
+  // save each frame of animation
+  saveFrame("frames/####.png");
+  
+  // leaves the program if the animation is finished
+  if (name.isFinished) {
+    exit();
+  }
 }
