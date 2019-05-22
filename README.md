@@ -2,7 +2,8 @@
 take in a photo and text as an input, producing an animated video as an output using Processing (Java).
 
 <h1> Step 1 </h1>
-Download the most recent version of Precessing found below: <a href = "https://processing.org/download/">https://processing.org/download/</a>
+Download the most recent version of Precessing found below if you havent already: 
+<a href = "https://processing.org/download/">https://processing.org/download/</a>
 
 <h1> Step 2 </h1>
 Download the files from this repository using the green button at the top-right that says "clone or download", be sure that they are all in the same folder. Also be sure that the client's logo is in that folder as well.
