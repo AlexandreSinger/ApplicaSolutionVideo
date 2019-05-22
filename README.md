@@ -21,8 +21,7 @@ Once downloaded, open the file "ApplicaSolutionVideo.pde" using Processing
 In the top bar select sketch > import library > add library
 <img src="ApplicaSolutionVideo/assets/addLibrary.png">
 In the search bar, find the library titled "Video Export", click it and install the library. You will see a green chech mark next to the library when done.
-<img src="ApplicaSolutionVideo/assets/installLibrary.png">
-Now do the same thing with the library titled "Video":
+Now do the same thing with the library titled "Video", it should look like this when done:
 <img src="ApplicaSolutionVideo/assets/installLibrary2.png">
 
 <h1> Step 6: Input the client's information </h1>
