@@ -4,7 +4,7 @@ import com.hamoid.*;
 int animationType = 1;
 String logoFile = "assets/test.png";
 String companyName = "Your Company Name Here";
-String fileName = "testVideo.mp4";
+String fileName = "output/testVideo.mp4";
 
 // declarations of the object variables
 Logo logo;
@@ -56,6 +56,7 @@ void draw() {
   // exports the video to a file, the exits the program
   if (name.isFinished) {
     videoExport.endMovie();
+    print(videoExport.getFfmpegPath());
     exit();
   }
 }
