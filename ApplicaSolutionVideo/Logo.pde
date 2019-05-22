@@ -1,12 +1,12 @@
 // declaration of an object class called Logo that will hold an image
-class Logo {
+class Image {
   // variables for the object
   int x, y, w, h, angle = 0;
   float scale = 1, transparency = 255, flipScale = 1;
   PImage img;
 
   // constructor function that initializes the object with it's location, size, and image location
-  Logo(int ix, int iy, int iw, String iimg) {
+  Image(int ix, int iy, int iw, String iimg) {
     x = ix;
     y = iy;
     w = iw;

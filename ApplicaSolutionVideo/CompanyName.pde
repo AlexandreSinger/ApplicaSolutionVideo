@@ -1,5 +1,5 @@
 // declares a class called CompanyName that will hold a text object
-class CompanyName {
+class Text {
   // object variables that the text will use
   int x, y, w, fontSize, tx;
   String name;
@@ -7,7 +7,7 @@ class CompanyName {
   boolean isFinished;
 
   // constructor function that takes in the name, location, and size of the text
-  CompanyName(String iname, int ix, int iy, int isize) {
+  Text(String iname, int ix, int iy, int isize) {
     x = ix;
     y = iy;
     name = iname;
