@@ -18,17 +18,20 @@ class Text {
   }
 
   // function that shows the text on the screen
-  void show() {
-    frame.textAlign(CENTER);
-    frame.textSize(fontSize);
-    frame.textFont(font);
-
-    frame.text(name, x, y);
+  void show(PGraphics screen) {
+    screen.textAlign(CENTER);
+    screen.textSize(fontSize);
+    screen.textFont(font);
+    screen.text(name, x, y);
   }
 
   // function that will preset the animation
-  void preset() {
-    x = 0;
+  void preset(int type) {
+    if (type == 0) {
+      x = tx;
+    } else if (type == 1) {
+      x = 0;
+    }
   }
 
   // animation functions

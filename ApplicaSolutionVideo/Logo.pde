@@ -6,7 +6,7 @@ class Image {
   PImage img;
 
   // constructor function that initializes the object with it's location, size, and image location
-  Image(int ix, int iy, int iw, String iimg) {
+  Image(String iimg, int ix, int iy, int iw) {
     x = ix;
     y = iy;
     w = iw;
@@ -15,26 +15,31 @@ class Image {
   }
 
   // function to show the image (allowing for animations to be used
-  void show() {
-    frame.tint(255, transparency);
-    frame.imageMode(CENTER);
+  void show(PGraphics screen) {
+    screen.tint(255, transparency);
+    screen.imageMode(CENTER);
 
-    frame.pushMatrix();
+    screen.pushMatrix();
 
-    frame.translate(x, y);
-    //scale(scale);
-    frame.scale(flipScale, 1);
-    frame.rotate(radians(angle));
-    frame.image(img, 0, 0);
+    screen.translate(x, y);
+    screen.scale(flipScale, 1);
+    screen.rotate(radians(angle));
+    screen.image(img, 0, 0);
 
-    frame.popMatrix();
+    screen.popMatrix();
   }
 
   // function to preset the animation
-  void preset() {
-    flipScale = -1;
-    transparency = 0;
-    angle = 0;
+  void preset(int type) {
+    if (type == 0) {
+      transparency = 255;
+      flipScale = 1;
+      scale = 1;
+    } else if (type == 1) {
+      flipScale = -1;
+      transparency = 0;
+      angle = 0;
+    }
   }
 
   // animation function
@@ -48,13 +53,5 @@ class Image {
       }
     } else if (type == 2) {
     }
-  }
-
-  // reset function to reset the animation
-  void reset() {
-    angle = 0;
-    transparency = 255;
-    scale = 1;
-    flipScale = 1;
   }
 }
