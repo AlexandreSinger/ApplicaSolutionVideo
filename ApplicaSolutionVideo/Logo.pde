@@ -1,8 +1,8 @@
 // declaration of an object class called Logo that will hold an image
 class Image {
   // variables for the object
-  int x, y, w, h, angle = 0;
-  float scale = 1, transparency = 255, flipScale = 1;
+  int x, y, w, h, angle = 0, tx, ty;
+  float transparency = 255, flipScale = 1;
   PImage img;
 
   // constructor function that initializes the object with it's location, size, and image location
@@ -12,6 +12,8 @@ class Image {
     w = iw;
     img = loadImage(iimg);
     img.resize(w, 0);
+    tx = x;
+    ty = y;
   }
 
   // function to show the image (allowing for animations to be used
@@ -34,24 +36,34 @@ class Image {
     if (type == 0) {
       transparency = 255;
       flipScale = 1;
-      scale = 1;
     } else if (type == 1) {
       flipScale = -1;
       transparency = 0;
       angle = 0;
+    } else if (type == 2) {
+      y += frameHeight;
+    } else if (type == 3) {
+      transparency = 0;
     }
   }
 
   // animation function
   void animate(int type) {
     if (type == 1) {
-      if (transparency <= 255) {
+      if (transparency < 255) {
         transparency += 8;
       }
       if (flipScale <= 1) {
         flipScale += 0.05;
       }
     } else if (type == 2) {
+      if (y > ty) {
+        y -= 12;
+      }
+    } else if (type == 3) {
+      if (transparency < 255) {
+        transparency += 8;
+      }
     }
   }
 }

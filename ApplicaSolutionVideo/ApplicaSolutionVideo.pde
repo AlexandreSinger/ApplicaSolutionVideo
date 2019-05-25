@@ -2,10 +2,10 @@ import com.hamoid.*;            // Reference: https://funprogramming.org/VideoEx
 import processing.video.*;
 
 // constants, changed before program is run
-int animationType = 1;
+int animationType = 3;
 String logoFile = "assets/test.png";
 String companyName = "Your Company Name Here";
-String fileName = "testVideo";
+String fileName = "Option3";    //testVideo
 
 // declarations of the object variables
 Image logo;
@@ -140,8 +140,8 @@ void setup() {
     frame.background(46, 179, 253);
 
     // make the logo step animations based on the chosen animation type
-    //logo.animate(animationType);
-    //name.animate(animationType);
+    //logo.animate(0);
+    //name.animate(0);
 
     // in each iteration, show the logo and the name
     logo.show(frame);
